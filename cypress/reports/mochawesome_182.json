@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-10T20:13:39.708Z",
+    "end": "2022-08-10T20:13:41.300Z",
+    "duration": 1592,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "89350c9c-3a11-4473-a5d6-a9ebd0a17f25",
+      "title": "",
+      "fullFile": "cypress/integration/01.starwarsApi_spec.js",
+      "file": "cypress/integration/01.starwarsApi_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5406d5ab-d98d-4b0c-84c0-07e44d487ad5",
+          "title": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realize uma requisição para a API",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Realize uma requisição para a API",
+              "timedOut": null,
+              "duration": 299,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@mockFetch').should('be.called');",
+              "err": {},
+              "uuid": "76c7d453-9ec4-41c6-ba1d-57fdaec0085e",
+              "parentUUID": "5406d5ab-d98d-4b0c-84c0-07e44d487ad5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Preencha a tabela com os dados retornados",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Preencha a tabela com os dados retornados",
+              "timedOut": null,
+              "duration": 308,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "planets.forEach(planet => {\n  cy.contains(planet.name);\n  cy.contains(planet.rotation_period);\n  cy.contains(planet.orbital_period);\n  cy.contains(planet.diameter);\n  cy.contains(planet.climate);\n  cy.contains(planet.gravity);\n  cy.contains(planet.terrain);\n  cy.contains(planet.surface_water);\n  cy.contains(planet.population);\n});",
+              "err": {},
+              "uuid": "1acd0cb3-ecd2-45c8-85fe-07b880f229f7",
+              "parentUUID": "5406d5ab-d98d-4b0c-84c0-07e44d487ad5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifique se a tabela tem 13 colunas",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem 13 colunas",
+              "timedOut": null,
+              "duration": 101,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 14 chaves em cada planeta, mas a chave `residents` não deve ser exibida totalizando 13 colunas\ncy.get('table tr:first th').should('have.length', MAX_COLUMNS_COUNT);",
+              "err": {},
+              "uuid": "b929c07a-2fa2-47ea-9607-31418d357ccc",
+              "parentUUID": "5406d5ab-d98d-4b0c-84c0-07e44d487ad5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifique se a tabela tem uma linha para cada planeta retornado",
+              "fullTitle": "1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents` Verifique se a tabela tem uma linha para cada planeta retornado",
+              "timedOut": null,
+              "duration": 85,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// a requisição (mock) retorna 10 planetas, somando com mais um linha do header totalizando 11 linhas\ncy.get('table tr').should('have.length', planets.length + 1);",
+              "err": {},
+              "uuid": "1d1ff3ea-a806-46ae-9968-80a2541130e2",
+              "parentUUID": "5406d5ab-d98d-4b0c-84c0-07e44d487ad5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "76c7d453-9ec4-41c6-ba1d-57fdaec0085e",
+            "1acd0cb3-ecd2-45c8-85fe-07b880f229f7",
+            "b929c07a-2fa2-47ea-9607-31418d357ccc",
+            "1d1ff3ea-a806-46ae-9968-80a2541130e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

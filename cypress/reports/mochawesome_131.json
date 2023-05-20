@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-10T10:29:32.160Z",
+    "end": "2022-08-10T10:29:47.268Z",
+    "duration": 15108,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79a09256-506a-4627-bd44-14a2992e9ce9",
+      "title": "",
+      "fullFile": "cypress/integration/04.multipleFilters_spec.js",
+      "file": "cypress/integration/04.multipleFilters_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b790c80c-320f-41dc-bca1-12d5e7f74164",
+          "title": "4 - Implemente múltiplos filtros numéricos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicione dois filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "fullTitle": "4 - Implemente múltiplos filtros numéricos Adicione dois filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "timedOut": null,
+              "duration": 1896,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('table tr').should('have.length', ROWS_TOTAL);\ncy.addFilter('diameter', 'maior que', '9000');\ncy.get('table tr').should('have.length', FILTERED_ROWS);\ncy.addFilter('population', 'menor que', '1000000');\ncy.get('table tr').should('have.length', DOUBLE_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "76cc32ce-4b27-4f28-802b-fb4952597419",
+              "parentUUID": "b790c80c-320f-41dc-bca1-12d5e7f74164",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adicione três filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "fullTitle": "4 - Implemente múltiplos filtros numéricos Adicione três filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "timedOut": null,
+              "duration": 12326,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('table tr').should('have.length', ROWS_TOTAL);\ncy.addFilter('diameter', 'maior que', '9000');\ncy.get('table tr').should('have.length', FILTERED_ROWS);\ncy.addFilter('population', 'menor que', '1000000');\ncy.get('table tr').should('have.length', DOUBLE_FILTERED_ROWS);\ncy.addFilter('rotation_period', 'igual a', '23');\ncy.get('table tr').should('have.length', TRIPLE_FILTERED_ROWS);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Too many elements found. Found '4', expected '2'.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Too many elements found. Found '4', expected '2'.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/04.multipleFilters_spec.js:151:24)",
+                "diff": "- 4\n+ 2\n"
+              },
+              "uuid": "04159121-856a-443a-8192-b06c38b3cc95",
+              "parentUUID": "b790c80c-320f-41dc-bca1-12d5e7f74164",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "76cc32ce-4b27-4f28-802b-fb4952597419"
+          ],
+          "failures": [
+            "04159121-856a-443a-8192-b06c38b3cc95"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

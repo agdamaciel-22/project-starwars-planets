@@ -1,0 +1,179 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2022-08-09T20:02:06.748Z",
+    "end": "2022-08-09T20:02:48.247Z",
+    "duration": 41499,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6aaf623a-f85f-4a52-a5b7-2e7f8f2f7f02",
+      "title": "",
+      "fullFile": "cypress/integration/09.sortPlanets_spec.js",
+      "file": "cypress/integration/09.sortPlanets_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c21d640-1dde-4851-9b65-3ec2e21901f6",
+          "title": "9 - Ordene as colunas de forma ascendente ou descendente",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifique a ordenação inicial",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Verifique a ordenação inicial",
+              "timedOut": null,
+              "duration": 10335,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expectedPlanets = ['Alderaan', 'Bespin', 'Coruscant', 'Dagobah', 'Endor', 'Hoth', 'Kamino', 'Naboo', 'Tatooine', 'Yavin IV'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"planet-name\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"planet-name\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "587f2af6-37cf-4f8d-8469-e06020005bae",
+              "parentUUID": "8c21d640-1dde-4851-9b65-3ec2e21901f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordene os planetas do maior período orbital para o menor período orbital",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do maior período orbital para o menor período orbital",
+              "timedOut": null,
+              "duration": 10078,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('orbital_period', 'desc');\nconst expectedPlanets = ['Bespin', 'Yavin IV', 'Hoth', 'Kamino', 'Endor', 'Coruscant', 'Alderaan', 'Dagobah', 'Naboo', 'Tatooine'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "269346e9-ffae-4eaa-97c0-d18f01c1a933",
+              "parentUUID": "8c21d640-1dde-4851-9b65-3ec2e21901f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "timedOut": null,
+              "duration": 10073,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('diameter', 'asc');\nconst expectedPlanets = ['Endor', 'Hoth', 'Dagobah', 'Yavin IV', 'Tatooine', 'Naboo', 'Coruscant', 'Alderaan', 'Kamino', 'Bespin'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "f8b64903-1fce-42f6-8b86-7fe168dec3be",
+              "parentUUID": "8c21d640-1dde-4851-9b65-3ec2e21901f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordene os planetas do menos populoso para o mais populoso",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menos populoso para o mais populoso",
+              "timedOut": null,
+              "duration": 10089,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('population', 'desc');\nconst expectedPlanets = ['Coruscant', 'Naboo', 'Alderaan', 'Kamino', 'Endor', 'Bespin', 'Tatooine', 'Yavin IV'];\nconst expectedPlanetsWithUnknownValues = ['Dagobah', 'Hoth'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  if (expectedPlanets[index]) {\n    expect(el).to.contain(expectedPlanets[index]);\n  } else {\n    expect(el.text()).to.be.oneOf(expectedPlanetsWithUnknownValues);\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-sort\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "2c584192-ce82-4b7a-b2a4-10d9ef023d66",
+              "parentUUID": "8c21d640-1dde-4851-9b65-3ec2e21901f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "587f2af6-37cf-4f8d-8469-e06020005bae",
+            "269346e9-ffae-4eaa-97c0-d18f01c1a933",
+            "f8b64903-1fce-42f6-8b86-7fe168dec3be",
+            "2c584192-ce82-4b7a-b2a4-10d9ef023d66"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 40575,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

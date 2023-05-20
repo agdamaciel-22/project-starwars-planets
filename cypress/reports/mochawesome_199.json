@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-10T20:24:49.406Z",
+    "end": "2022-08-10T20:24:50.553Z",
+    "duration": 1147,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3ba1955b-69cf-4121-9632-8bf0af77add8",
+      "title": "",
+      "fullFile": "cypress/integration/09.sortPlanets_spec.js",
+      "file": "cypress/integration/09.sortPlanets_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e61bc77b-ee7a-42f0-853a-58748456fff7",
+          "title": "9 - Ordene as colunas de forma ascendente ou descendente",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifique a ordenação inicial",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Verifique a ordenação inicial",
+              "timedOut": null,
+              "duration": 300,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expectedPlanets = ['Alderaan', 'Bespin', 'Coruscant', 'Dagobah', 'Endor', 'Hoth', 'Kamino', 'Naboo', 'Tatooine', 'Yavin IV'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {
+                "message": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > filterByNumericValues is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Ordene as colunas de fo...`",
+                "estack": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > filterByNumericValues is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Ordene as colunas de fo...`\n    at TableProvider (http://localhost:3000/static/js/bundle.js:697:7)\n    at renderWithHooks (http://localhost:3000/static/js/bundle.js:23979:22)\n    at mountIndeterminateComponent (http://localhost:3000/static/js/bundle.js:26741:17)\n    at beginWork (http://localhost:3000/static/js/bundle.js:27940:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/bundle.js:12929:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/bundle.js:12978:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/bundle.js:13038:35)\n    at beginWork$1 (http://localhost:3000/static/js/bundle.js:32780:11)\n    at performUnitOfWork (http://localhost:3000/static/js/bundle.js:31616:16)\n    at workLoopSync (http://localhost:3000/static/js/bundle.js:31553:9)",
+                "diff": null
+              },
+              "uuid": "f12c8981-e915-436c-ad0e-8c7453b08a60",
+              "parentUUID": "e61bc77b-ee7a-42f0-853a-58748456fff7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordene os planetas do maior período orbital para o menor período orbital",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do maior período orbital para o menor período orbital",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('orbital_period', 'desc');\nconst expectedPlanets = ['Bespin', 'Yavin IV', 'Hoth', 'Kamino', 'Endor', 'Coruscant', 'Alderaan', 'Dagobah', 'Naboo', 'Tatooine'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {},
+              "uuid": "21a2b8d8-230d-4efc-bd09-c91eaddecb4f",
+              "parentUUID": "e61bc77b-ee7a-42f0-853a-58748456fff7",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('diameter', 'asc');\nconst expectedPlanets = ['Endor', 'Hoth', 'Dagobah', 'Yavin IV', 'Tatooine', 'Naboo', 'Coruscant', 'Alderaan', 'Kamino', 'Bespin'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {},
+              "uuid": "c028bd61-b188-4753-b61e-d16a4dcfc623",
+              "parentUUID": "e61bc77b-ee7a-42f0-853a-58748456fff7",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ordene os planetas do menos populoso para o mais populoso",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menos populoso para o mais populoso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('population', 'desc');\nconst expectedPlanets = ['Coruscant', 'Naboo', 'Alderaan', 'Kamino', 'Endor', 'Bespin', 'Tatooine', 'Yavin IV'];\nconst expectedPlanetsWithUnknownValues = ['Dagobah', 'Hoth'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  if (expectedPlanets[index]) {\n    expect(el).to.contain(expectedPlanets[index]);\n  } else {\n    expect(el.text()).to.be.oneOf(expectedPlanetsWithUnknownValues);\n  }\n});",
+              "err": {},
+              "uuid": "8b7dd573-7a07-4d13-97d3-3cd3b6128072",
+              "parentUUID": "e61bc77b-ee7a-42f0-853a-58748456fff7",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f12c8981-e915-436c-ad0e-8c7453b08a60"
+          ],
+          "pending": [],
+          "skipped": [
+            "21a2b8d8-230d-4efc-bd09-c91eaddecb4f",
+            "c028bd61-b188-4753-b61e-d16a4dcfc623",
+            "8b7dd573-7a07-4d13-97d3-3cd3b6128072"
+          ],
+          "duration": 300,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

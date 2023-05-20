@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-09T20:01:20.405Z",
+    "end": "2022-08-09T20:01:31.515Z",
+    "duration": 11110,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63c10439-7219-44d3-8460-70099f04d24b",
+      "title": "",
+      "fullFile": "cypress/integration/06.repeatedFilters_spec.js",
+      "file": "cypress/integration/06.repeatedFilters_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "798a10bb-7203-4153-b8f4-d1ff52d74a09",
+          "title": "6 - Não utilize filtros repetidos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Filtre por população e o remove das opções",
+              "fullTitle": "6 - Não utilize filtros repetidos Filtre por população e o remove das opções",
+              "timedOut": null,
+              "duration": 10249,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const allColumnsOptions = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).find('option').should(options => {\n  expect(options).to.have.length(allColumnsOptions.length);\n  allColumnsOptions.forEach(option => {\n    expect(options).to.contain(option);\n  });\n});\ncy.addFilter('population', 'maior que', '8000');\ncy.get('table tr').should('have.length', FILTERED_ROWS_COUNT);\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).find('option').should(options => {\n  expect(options).to.have.length(allColumnsOptions.length - 1);\n  expect(options).to.not.contain('population');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "35c26024-1326-48bd-b218-3dec1631bc23",
+              "parentUUID": "798a10bb-7203-4153-b8f4-d1ff52d74a09",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "35c26024-1326-48bd-b218-3dec1631bc23"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10249,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

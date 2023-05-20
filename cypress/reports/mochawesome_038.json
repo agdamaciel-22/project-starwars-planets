@@ -1,0 +1,294 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 0,
+    "pending": 0,
+    "failures": 9,
+    "start": "2022-08-08T21:50:47.533Z",
+    "end": "2022-08-08T21:52:19.503Z",
+    "duration": 91970,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "577eef5a-f43e-4dc7-bb1d-2545175903cb",
+      "title": "",
+      "fullFile": "cypress/integration/03.starwarsNumericFilter_spec.js",
+      "file": "cypress/integration/03.starwarsNumericFilter_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+          "title": "3 - Crie um filtro para valores numéricos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Renderize o filtro de coluna",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o filtro de coluna",
+              "timedOut": null,
+              "duration": 10292,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const options = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).children().should('have.length', options.length).each(el => {\n  expect(el.text()).to.be.oneOf(options);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "235c9d66-6e6f-4ad4-bd2f-70ad8d887ef0",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Renderize o filtro de comparação",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o filtro de comparação",
+              "timedOut": null,
+              "duration": 10078,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const options = ['maior que', 'menor que', 'igual a'];\ncy.getByTestId(_dataTestIds.COMPARISON_FILTER).children().should('have.length', options.length).each(el => {\n  expect(el.text()).to.be.oneOf(options);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "8bea0bdf-86e0-4638-9ea8-9ee60831a588",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Renderize o campo para o valor do filtro",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o campo para o valor do filtro",
+              "timedOut": null,
+              "duration": 10072,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.VALUE_FILTER).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/03.starwarsNumericFilter_spec.js:145:47)",
+                "diff": null
+              },
+              "uuid": "ff08178c-999c-4177-8630-dfec990d36c1",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Renderize o botão para executar a filtragem",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o botão para executar a filtragem",
+              "timedOut": null,
+              "duration": 10074,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.BUTTON_FILTER).should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"button-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"button-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/03.starwarsNumericFilter_spec.js:148:48)",
+                "diff": null
+              },
+              "uuid": "a92d0f38-4bbd-4f82-968c-156ed7a957d0",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica valores iniciais de cada campo",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Verifica valores iniciais de cada campo",
+              "timedOut": null,
+              "duration": 10067,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.COLUMN_FILTER).should('have.value', 'population');\ncy.getByTestId(_dataTestIds.COMPARISON_FILTER).should('have.value', 'maior que');\ncy.getByTestId(_dataTestIds.VALUE_FILTER).should('have.value', '0');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"column-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/03.starwarsNumericFilter_spec.js:151:48)",
+                "diff": null
+              },
+              "uuid": "e6c6f213-2fcc-40f7-be4c-cd1ed0e26cc4",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtre utilizando apenas o botão de filtrar",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando apenas o botão de filtrar",
+              "timedOut": null,
+              "duration": 10076,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const DEFAULT_FILTERED_ROWS = 9;\ncy.getByTestId(_dataTestIds.BUTTON_FILTER).click();\ncy.get('table tr').should('have.length', DEFAULT_FILTERED_ROWS);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"button-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"button-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "7d106d59-6e75-4394-b74e-8f0bb8db153a",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtre utilizando a comparação \"menor que\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"menor que\"",
+              "timedOut": null,
+              "duration": 10101,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const LESS_FILTERED_ROWS = 7;\ncy.addFilter('surface_water', 'menor que', '40');\ncy.get('table tr').should('have.length', LESS_FILTERED_ROWS);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "ecfd9cca-2f80-4f11-a6c3-e7b756b7810d",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtre utilizando a comparação \"maior que\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"maior que\"",
+              "timedOut": null,
+              "duration": 10082,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const GREATER_FILTERED_ROWS = 8;\ncy.addFilter('diameter', 'maior que', '8900');\ncy.get('table tr').should('have.length', GREATER_FILTERED_ROWS);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "38f21e05-3783-4e1f-b49d-f195edfc96ce",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filtre utilizando a comparação \"igual a\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"igual a\"",
+              "timedOut": null,
+              "duration": 10076,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const EQUALS_FILTERED_ROWS = 2;\ncy.addFilter('population', 'igual a', '200000');\ncy.get('table tr').should('have.length', EQUALS_FILTERED_ROWS);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"comparison-filter\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/index.js:131:63)",
+                "diff": null
+              },
+              "uuid": "6125c4ce-def7-4457-9e18-69dd7c86ba2d",
+              "parentUUID": "d87d0cfd-dae5-4fe5-aa9c-faa6e804a542",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "235c9d66-6e6f-4ad4-bd2f-70ad8d887ef0",
+            "8bea0bdf-86e0-4638-9ea8-9ee60831a588",
+            "ff08178c-999c-4177-8630-dfec990d36c1",
+            "a92d0f38-4bbd-4f82-968c-156ed7a957d0",
+            "e6c6f213-2fcc-40f7-be4c-cd1ed0e26cc4",
+            "7d106d59-6e75-4394-b74e-8f0bb8db153a",
+            "ecfd9cca-2f80-4f11-a6c3-e7b756b7810d",
+            "38f21e05-3783-4e1f-b49d-f195edfc96ce",
+            "6125c4ce-def7-4457-9e18-69dd7c86ba2d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 90918,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

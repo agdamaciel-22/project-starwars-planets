@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-08T19:19:40.818Z",
+    "end": "2022-08-08T19:19:41.476Z",
+    "duration": 658,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "6c840f4f-3bd2-4b0e-bfa0-f3905f251c69",
+      "title": "",
+      "fullFile": "cypress/integration/04.multipleFilters_spec.js",
+      "file": "cypress/integration/04.multipleFilters_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00436c49-2c57-49ce-9d21-b8ed7e006e43",
+          "title": "4 - Implemente múltiplos filtros numéricos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicione dois filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "fullTitle": "4 - Implemente múltiplos filtros numéricos Adicione dois filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "timedOut": null,
+              "duration": 584,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('table tr').should('have.length', ROWS_TOTAL);\ncy.addFilter('diameter', 'maior que', '9000');\ncy.get('table tr').should('have.length', FILTERED_ROWS);\ncy.addFilter('population', 'menor que', '1000000');\ncy.get('table tr').should('have.length', DOUBLE_FILTERED_ROWS);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `4 - Implemente múltiplos fi...`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `4 - Implemente múltiplos fi...`\n    at http://localhost:40967/__cypress/runner/cypress_runner.js:163608:82\n    at visitFailedByErr (http://localhost:40967/__cypress/runner/cypress_runner.js:162912:12)\n    at http://localhost:40967/__cypress/runner/cypress_runner.js:163607:11\n    at tryCatcher (http://localhost:40967/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:40967/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:40967/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:40967/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:40967/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:40967/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:40967/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:40967/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:40967/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:40967/__cypress/tests?p=cypress/integration/04.multipleFilters_spec.js:130:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1161:16)\n  ",
+                "diff": null
+              },
+              "uuid": "2a835d51-4191-4df2-8138-9760b228d630",
+              "parentUUID": "00436c49-2c57-49ce-9d21-b8ed7e006e43",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adicione três filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "fullTitle": "4 - Implemente múltiplos filtros numéricos Adicione três filtros e verifique se a tabela foi atualizada com as informações filtradas",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('table tr').should('have.length', ROWS_TOTAL);\ncy.addFilter('diameter', 'maior que', '9000');\ncy.get('table tr').should('have.length', FILTERED_ROWS);\ncy.addFilter('population', 'menor que', '1000000');\ncy.get('table tr').should('have.length', DOUBLE_FILTERED_ROWS);\ncy.addFilter('rotation_period', 'igual a', '23');\ncy.get('table tr').should('have.length', TRIPLE_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "897d5376-2f01-4364-954c-e4c7a54ea0bc",
+              "parentUUID": "00436c49-2c57-49ce-9d21-b8ed7e006e43",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2a835d51-4191-4df2-8138-9760b228d630"
+          ],
+          "pending": [],
+          "skipped": [
+            "897d5376-2f01-4364-954c-e4c7a54ea0bc"
+          ],
+          "duration": 584,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

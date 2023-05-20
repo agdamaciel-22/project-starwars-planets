@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-09T19:57:37.687Z",
+    "end": "2022-08-09T19:57:39.860Z",
+    "duration": 2173,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd57ef39-4051-4884-826f-23dafc574800",
+      "title": "",
+      "fullFile": "cypress/integration/05.testCoverage50_spec.js",
+      "file": "cypress/integration/05.testCoverage50_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "964ac44f-ac9b-4fa7-8686-8650ec3b8fbb",
+          "title": "5 - Desenvolva testes para atingir 50% de cobertura total da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cobertura de \"Statements\" total deverá ser maior ou igual a 50.",
+              "fullTitle": "5 - Desenvolva testes para atingir 50% de cobertura total da aplicação Cobertura de \"Statements\" total deverá ser maior ou igual a 50.",
+              "timedOut": null,
+              "duration": 2071,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.statements.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);",
+              "err": {},
+              "uuid": "49690c96-4d4e-4e25-a0de-606a05983182",
+              "parentUUID": "964ac44f-ac9b-4fa7-8686-8650ec3b8fbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Functions\" total deverá ser maior ou igual a 50.",
+              "fullTitle": "5 - Desenvolva testes para atingir 50% de cobertura total da aplicação Cobertura de \"Functions\" total deverá ser maior ou igual a 50.",
+              "timedOut": null,
+              "duration": 25,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.functions.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);",
+              "err": {},
+              "uuid": "8563b0e2-fd26-471f-99e5-c7dca55eccc7",
+              "parentUUID": "964ac44f-ac9b-4fa7-8686-8650ec3b8fbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Branches\" total deverá ser maior ou igual a 50.",
+              "fullTitle": "5 - Desenvolva testes para atingir 50% de cobertura total da aplicação Cobertura de \"Branches\" total deverá ser maior ou igual a 50.",
+              "timedOut": null,
+              "duration": 21,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.branches.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);",
+              "err": {},
+              "uuid": "619d188b-acb0-49de-94e9-a97a0309a483",
+              "parentUUID": "964ac44f-ac9b-4fa7-8686-8650ec3b8fbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Lines\" total deverá ser maior ou igual a 50.",
+              "fullTitle": "5 - Desenvolva testes para atingir 50% de cobertura total da aplicação Cobertura de \"Lines\" total deverá ser maior ou igual a 50.",
+              "timedOut": null,
+              "duration": 18,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.lines.pct', {\n  timeout: 0\n}).should('be.gte', 50.00);",
+              "err": {},
+              "uuid": "64f04f40-f3dc-456f-95a9-407ac1a005b2",
+              "parentUUID": "964ac44f-ac9b-4fa7-8686-8650ec3b8fbb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49690c96-4d4e-4e25-a0de-606a05983182",
+            "8563b0e2-fd26-471f-99e5-c7dca55eccc7",
+            "619d188b-acb0-49de-94e9-a97a0309a483",
+            "64f04f40-f3dc-456f-95a9-407ac1a005b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2135,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

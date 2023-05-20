@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-08-11T01:19:36.003Z",
+    "end": "2022-08-11T01:19:36.180Z",
+    "duration": 177,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "497a089a-4e86-4d88-b4ea-e43099ad7256",
+      "title": "",
+      "fullFile": "cypress/integration/08.testCoverage90_spec.js",
+      "file": "cypress/integration/08.testCoverage90_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "83b54d63-6cd1-424f-941c-a16632e79e0e",
+          "title": "8 - Desenvolva testes para atingir 90% de cobertura total da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "8 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 34,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.statements.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 0ms: expected 89.18 to be at least 90",
+                "estack": "AssertionError: Timed out retrying after 0ms: expected 89.18 to be at least 90\n    at Context.eval (http://localhost:32911/__cypress/tests?p=cypress/integration/08.testCoverage90_spec.js:105:8)",
+                "diff": "- 89.18\n+ 90\n"
+              },
+              "uuid": "e1ead7b3-7d28-4bd1-bdb5-89f8cf7e733c",
+              "parentUUID": "83b54d63-6cd1-424f-941c-a16632e79e0e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "8 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 20,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.functions.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 0ms: expected 85.18 to be at least 90",
+                "estack": "AssertionError: Timed out retrying after 0ms: expected 85.18 to be at least 90\n    at Context.eval (http://localhost:32911/__cypress/tests?p=cypress/integration/08.testCoverage90_spec.js:110:8)",
+                "diff": "- 85.18\n+ 90\n"
+              },
+              "uuid": "5bf416fc-36c3-4796-acdd-87de1227ea6f",
+              "parentUUID": "83b54d63-6cd1-424f-941c-a16632e79e0e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "8 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 15,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.branches.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 0ms: expected 54.54 to be at least 90",
+                "estack": "AssertionError: Timed out retrying after 0ms: expected 54.54 to be at least 90\n    at Context.eval (http://localhost:32911/__cypress/tests?p=cypress/integration/08.testCoverage90_spec.js:115:8)",
+                "diff": "- 54.54\n+ 90\n"
+              },
+              "uuid": "85f5c547-2191-4954-bd2f-a22b5e066859",
+              "parentUUID": "83b54d63-6cd1-424f-941c-a16632e79e0e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "8 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 16,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.lines.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {},
+              "uuid": "4d089117-e2af-4469-82bf-9e4109d4c5b5",
+              "parentUUID": "83b54d63-6cd1-424f-941c-a16632e79e0e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d089117-e2af-4469-82bf-9e4109d4c5b5"
+          ],
+          "failures": [
+            "e1ead7b3-7d28-4bd1-bdb5-89f8cf7e733c",
+            "5bf416fc-36c3-4796-acdd-87de1227ea6f",
+            "85f5c547-2191-4954-bd2f-a22b5e066859"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 85,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

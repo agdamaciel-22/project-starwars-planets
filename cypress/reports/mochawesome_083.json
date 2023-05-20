@@ -1,0 +1,263 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-09T19:42:01.472Z",
+    "end": "2022-08-09T19:42:02.132Z",
+    "duration": 660,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "994500c9-3d07-4c91-bf93-baad835c0dd4",
+      "title": "",
+      "fullFile": "cypress/integration/03.starwarsNumericFilter_spec.js",
+      "file": "cypress/integration/03.starwarsNumericFilter_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+          "title": "3 - Crie um filtro para valores numéricos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Renderize o filtro de coluna",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o filtro de coluna",
+              "timedOut": null,
+              "duration": 590,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const options = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).children().should('have.length', options.length).each(el => {\n  expect(el.text()).to.be.oneOf(options);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `3 - Crie um filtro para val...`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `3 - Crie um filtro para val...`\n    at http://localhost:44447/__cypress/runner/cypress_runner.js:163608:82\n    at visitFailedByErr (http://localhost:44447/__cypress/runner/cypress_runner.js:162912:12)\n    at http://localhost:44447/__cypress/runner/cypress_runner.js:163607:11\n    at tryCatcher (http://localhost:44447/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44447/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:44447/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:44447/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:44447/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:44447/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:44447/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44447/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:44447/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:44447/__cypress/tests?p=cypress/integration/03.starwarsNumericFilter_spec.js:125:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1161:16)\n  ",
+                "diff": null
+              },
+              "uuid": "52a9e509-e962-4511-ab66-daff83ed94cf",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Renderize o filtro de comparação",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o filtro de comparação",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const options = ['maior que', 'menor que', 'igual a'];\ncy.getByTestId(_dataTestIds.COMPARISON_FILTER).children().should('have.length', options.length).each(el => {\n  expect(el.text()).to.be.oneOf(options);\n});",
+              "err": {},
+              "uuid": "7f76bb2b-7f9a-4b17-95d7-6735456cfa9f",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Renderize o campo para o valor do filtro",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o campo para o valor do filtro",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.VALUE_FILTER).should('be.visible');",
+              "err": {},
+              "uuid": "6dc665ea-2b23-44d1-b659-57407bd679b0",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Renderize o botão para executar a filtragem",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Renderize o botão para executar a filtragem",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.BUTTON_FILTER).should('be.visible');",
+              "err": {},
+              "uuid": "d66f25f5-49c0-476d-8a8c-db6beec3fac0",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verifica valores iniciais de cada campo",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Verifica valores iniciais de cada campo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_dataTestIds.COLUMN_FILTER).should('have.value', 'population');\ncy.getByTestId(_dataTestIds.COMPARISON_FILTER).should('have.value', 'maior que');\ncy.getByTestId(_dataTestIds.VALUE_FILTER).should('have.value', '0');",
+              "err": {},
+              "uuid": "c570b61a-99b6-4258-babc-27da5df1f313",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filtre utilizando apenas o botão de filtrar",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando apenas o botão de filtrar",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const DEFAULT_FILTERED_ROWS = 9;\ncy.getByTestId(_dataTestIds.BUTTON_FILTER).click();\ncy.get('table tr').should('have.length', DEFAULT_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "29b22355-3634-49ab-a98a-c7244f365301",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filtre utilizando a comparação \"menor que\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"menor que\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const LESS_FILTERED_ROWS = 7;\ncy.addFilter('surface_water', 'menor que', '40');\ncy.get('table tr').should('have.length', LESS_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "d408f536-baf5-4bef-8303-0f7d74546999",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filtre utilizando a comparação \"maior que\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"maior que\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const GREATER_FILTERED_ROWS = 8;\ncy.addFilter('diameter', 'maior que', '8900');\ncy.get('table tr').should('have.length', GREATER_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "a929da41-4159-4af1-9f69-2d5b8db53858",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Filtre utilizando a comparação \"igual a\"",
+              "fullTitle": "3 - Crie um filtro para valores numéricos Filtre utilizando a comparação \"igual a\"",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const EQUALS_FILTERED_ROWS = 2;\ncy.addFilter('population', 'igual a', '200000');\ncy.get('table tr').should('have.length', EQUALS_FILTERED_ROWS);",
+              "err": {},
+              "uuid": "32efe638-16ab-4d11-a8d4-c45f508fa4b5",
+              "parentUUID": "65a86104-3fbb-448d-9aa0-c506ae1254dc",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "52a9e509-e962-4511-ab66-daff83ed94cf"
+          ],
+          "pending": [],
+          "skipped": [
+            "7f76bb2b-7f9a-4b17-95d7-6735456cfa9f",
+            "6dc665ea-2b23-44d1-b659-57407bd679b0",
+            "d66f25f5-49c0-476d-8a8c-db6beec3fac0",
+            "c570b61a-99b6-4258-babc-27da5df1f313",
+            "29b22355-3634-49ab-a98a-c7244f365301",
+            "d408f536-baf5-4bef-8303-0f7d74546999",
+            "a929da41-4159-4af1-9f69-2d5b8db53858",
+            "32efe638-16ab-4d11-a8d4-c45f508fa4b5"
+          ],
+          "duration": 590,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

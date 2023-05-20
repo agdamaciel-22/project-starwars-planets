@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-06T13:46:30.065Z",
+    "end": "2022-08-06T13:47:00.205Z",
+    "duration": 30140,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "581ff7d2-aa04-467b-b2bf-643463c3279f",
+      "title": "",
+      "fullFile": "cypress/integration/09.sortPlanets_spec.js",
+      "file": "cypress/integration/09.sortPlanets_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f1f24043-6b51-4f75-8089-8654b9640cdb",
+          "title": "9 - Ordene as colunas de forma ascendente ou descendente",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifique a ordenação inicial",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Verifique a ordenação inicial",
+              "timedOut": null,
+              "duration": 30085,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expectedPlanets = ['Alderaan', 'Bespin', 'Coruscant', 'Dagobah', 'Endor', 'Hoth', 'Kamino', 'Naboo', 'Tatooine', 'Yavin IV'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Ordene as colunas de fo...`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Ordene as colunas de fo...`\n    at http://localhost:39719/__cypress/runner/cypress_runner.js:163608:82\n    at visitFailedByErr (http://localhost:39719/__cypress/runner/cypress_runner.js:162912:12)\n    at http://localhost:39719/__cypress/runner/cypress_runner.js:163607:11\n    at tryCatcher (http://localhost:39719/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:39719/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:39719/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:39719/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:39719/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:39719/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:39719/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:39719/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:39719/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:39719/__cypress/tests?p=cypress/integration/09.sortPlanets_spec.js:136:8)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (/home/myrella/.cache/Cypress/9.7.0/Cypress/resources/app/node_modules/@cypress/request/request.js:808:19)\n      at Object.onceWrapper (node:events:509:28)\n      at ClientRequest.emit (node:events:390:28)\n      at Socket.emitRequestTimeout (node:_http_client:763:9)\n      at Object.onceWrapper (node:events:509:28)\n      at Socket.emit (node:events:402:35)\n      at Socket._onTimeout (node:net:501:8)\n      at listOnTimeout (node:internal/timers:557:17)\n      at processTimers (node:internal/timers:500:7)\n  ",
+                "diff": null
+              },
+              "uuid": "fd987a9c-b8f6-4bdc-b820-a6930a39e440",
+              "parentUUID": "f1f24043-6b51-4f75-8089-8654b9640cdb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordene os planetas do maior período orbital para o menor período orbital",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do maior período orbital para o menor período orbital",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('orbital_period', 'desc');\nconst expectedPlanets = ['Bespin', 'Yavin IV', 'Hoth', 'Kamino', 'Endor', 'Coruscant', 'Alderaan', 'Dagobah', 'Naboo', 'Tatooine'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {},
+              "uuid": "5bd8a8e1-f50a-422b-ad59-aa6e163b4aca",
+              "parentUUID": "f1f24043-6b51-4f75-8089-8654b9640cdb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menor diâmetro para o maior diâmetro",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('diameter', 'asc');\nconst expectedPlanets = ['Endor', 'Hoth', 'Dagobah', 'Yavin IV', 'Tatooine', 'Naboo', 'Coruscant', 'Alderaan', 'Kamino', 'Bespin'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  expect(el).to.contain(expectedPlanets[index]);\n});",
+              "err": {},
+              "uuid": "3f6ceef3-3523-4a7c-8de6-7b29ba9be82c",
+              "parentUUID": "f1f24043-6b51-4f75-8089-8654b9640cdb",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ordene os planetas do menos populoso para o mais populoso",
+              "fullTitle": "9 - Ordene as colunas de forma ascendente ou descendente Ordene os planetas do menos populoso para o mais populoso",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "sortByColumn('population', 'desc');\nconst expectedPlanets = ['Coruscant', 'Naboo', 'Alderaan', 'Kamino', 'Endor', 'Bespin', 'Tatooine', 'Yavin IV'];\nconst expectedPlanetsWithUnknownValues = ['Dagobah', 'Hoth'];\ncy.getByTestId(_dataTestIds.PLANET_NAME).each((el, index) => {\n  if (expectedPlanets[index]) {\n    expect(el).to.contain(expectedPlanets[index]);\n  } else {\n    expect(el.text()).to.be.oneOf(expectedPlanetsWithUnknownValues);\n  }\n});",
+              "err": {},
+              "uuid": "b9c7bd6e-151e-4ff5-911f-b90a244fe53a",
+              "parentUUID": "f1f24043-6b51-4f75-8089-8654b9640cdb",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fd987a9c-b8f6-4bdc-b820-a6930a39e440"
+          ],
+          "pending": [],
+          "skipped": [
+            "5bd8a8e1-f50a-422b-ad59-aa6e163b4aca",
+            "3f6ceef3-3523-4a7c-8de6-7b29ba9be82c",
+            "b9c7bd6e-151e-4ff5-911f-b90a244fe53a"
+          ],
+          "duration": 30085,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

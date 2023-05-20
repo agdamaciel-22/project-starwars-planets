@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-11T02:15:48.331Z",
+    "end": "2022-08-11T02:15:50.406Z",
+    "duration": 2075,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0d1ed671-5f51-4d08-ae4a-f65d712a4d1d",
+      "title": "",
+      "fullFile": "cypress/integration/06.repeatedFilters_spec.js",
+      "file": "cypress/integration/06.repeatedFilters_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1b23bcc9-b63e-4e5b-bf65-7e03328a1c3a",
+          "title": "6 - Não utilize filtros repetidos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Filtre por população e o remove das opções",
+              "fullTitle": "6 - Não utilize filtros repetidos Filtre por população e o remove das opções",
+              "timedOut": null,
+              "duration": 1263,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const allColumnsOptions = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).find('option').should(options => {\n  expect(options).to.have.length(allColumnsOptions.length);\n  allColumnsOptions.forEach(option => {\n    expect(options).to.contain(option);\n  });\n});\ncy.addFilter('population', 'maior que', '8000');\ncy.get('table tr').should('have.length', FILTERED_ROWS_COUNT);\ncy.getByTestId(_dataTestIds.COLUMN_FILTER).find('option').should(options => {\n  expect(options).to.have.length(allColumnsOptions.length - 1);\n  expect(options).to.not.contain('population');\n});",
+              "err": {},
+              "uuid": "c1ae5490-9192-4f4d-8333-b53553c0c662",
+              "parentUUID": "1b23bcc9-b63e-4e5b-bf65-7e03328a1c3a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1ae5490-9192-4f4d-8333-b53553c0c662"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1263,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
